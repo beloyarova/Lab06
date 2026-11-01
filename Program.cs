@@ -63,28 +63,52 @@
 // Console.WriteLine();
 // Console.WriteLine($"5 + 10 = {Add(5, 10)}");
 // Console.WriteLine($"Площадь 2х2 больше площадь 1х5: {CalculateRectangleArea(2, 2) > CalculateRectangleArea(1, 5)}");
+// 
+// class Program
+// {
+//     static void Main()
+//     {
+//         Console.WriteLine(Add(2, 3));
+//         Console.WriteLine(Add(2.5, 3.5));
+//         Console.WriteLine(Add(2, 3, 4));
+//     }
 
-class Program
+//     static int Add(int a, int b)
+//     {
+//         return a + b;
+//     }
+
+//     static double Add(double a, double b)
+//     {
+//         return a + b;
+//     }
+
+//     static int Add(int a, int b, int c)
+//     {
+//         return a + b + c;
+//     }
+// }
+
+Console.WriteLine();
+Console.WriteLine("Методы вызывают методы");
+PrintNumberInfo(7);
+PrintNumberInfo(10);
+PrintNumberInfo(15);
+
+bool IsEven(int number)
 {
-    static void Main()
-    {
-        Console.WriteLine(Add(2, 3));
-        Console.WriteLine(Add(2.5, 3.5));
-        Console.WriteLine(Add(2, 3, 4));
-    }
+    return number % 2 == 0;
+}
 
-    static int Add(int a, int b)
-    {
-        return a + b;
-    }
+void PrintNumberInfo(int number)
+{
+    string parity = IsEven(number) ? "четное" : "нечетное";
+    Console.WriteLine($"{number} - {parity} число");
+}
 
-    static double Add(double a, double b)
-    {
-        return a + b;
-    }
-
-    static int Add(int a, int b, int c)
-    {
-        return a + b + c;
-    }
+Console.WriteLine();
+Console.WriteLine("Методы + циклы");
+for (int i = 1; i <= 5; i++)
+{
+    PrintNumberInfo(i);
 }
