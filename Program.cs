@@ -112,3 +112,25 @@ for (int i = 1; i <= 5; i++)
 {
     PrintNumberInfo(i);
 }
+
+double MetersToFeet(double meters)
+{
+    return meters * 3.28084;
+}
+
+double CelsiusToFahrenheit(double celsius)
+{
+    return (celsius * 9.0 / 5.0) + 32;
+}
+
+double metrs1 = 10;
+double metrs2 = 17;
+
+double celsius1 = 12.1;
+double celsius2 = 32.4;
+
+Console.WriteLine($"Перевод из метров в фунты: {metrs1} метры - {MetersToFeet(metrs1)} фунты");
+Console.WriteLine($"Перевод из метров в фунты: {metrs2} метры - {MetersToFeet(metrs2)} фунты");
+
+Console.WriteLine($"Перевод из Цельсия в Фаренгейты: {celsius1} метры - {CelsiusToFahrenheit(celsius1)} фунты");
+Console.WriteLine($"Перевод из Цельсия в Фаренгейты: {celsius2} метры - {CelsiusToFahrenheit(celsius2)} фунты");
